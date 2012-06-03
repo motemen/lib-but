@@ -35,8 +35,8 @@ lib::but - pretend not to have some modules
   use lib::but 'Foo::Bar';
   require 'Foo::Bar'; # fails even if you have installed Foo::Bar
 
-  perl -Mlib::but=Moose carton install Any::Moose
-  # carton does not count Moose in as Any::Moose's dependency
+  PERL5OPT='-Mlib::but=Moose' carton install Any::Moose
+  # not to count Moose in as Any::Moose's dependency
 
 =head1 DESCRIPTION
 

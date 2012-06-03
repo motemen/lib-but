@@ -1,0 +1,18 @@
+NAME
+    lib::but - pretend not to have some modules
+
+SYNOPSIS
+      use lib::but 'Foo::Bar';
+      require 'Foo::Bar'; # fails even if you have installed Foo::Bar
+
+      PERL5OPT='-Mlib::but=Moose' carton install Any::Moose
+      # not to count Moose in as Any::Moose's dependency
+
+DESCRIPTION
+AUTHOR
+    motemen <motemen@gmail.com>
+
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
